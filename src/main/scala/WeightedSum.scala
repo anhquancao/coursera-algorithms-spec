@@ -9,15 +9,16 @@ object WeightedSum {
   class Job(inputWeight: Int, inputLength: Int) extends Ordered[Job] {
     var weight: Int = inputWeight
     var length: Int = inputLength
-    var diff: Int = weight - length
+    var diff: Float = weight.toFloat / length
     var completionTime: Int = 0
-
 
     def compare(that: Job) =
       if (that.diff == this.diff)
         that.weight - this.weight
-      else
-        that.diff - this.diff
+      else {
+        if (that.diff - this.diff > 0) 1 else -1
+      }
+
 
     override def toString: String =
       "(weight: " + weight + ", length: " + length + ", diff: " + diff + ", completion time: " + completionTime + ")"
@@ -54,6 +55,8 @@ object WeightedSum {
       weightedSum += job.completionTime * job.weight
     }
 
-    println(weightedSum) //69119377652
+    println(weightedSum)
+    // Exercise 1: 69119377652
+    // Exercise 2: 67311454237
   }
 }

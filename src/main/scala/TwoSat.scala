@@ -59,7 +59,8 @@ object TwoSat {
 
     // Read data from the file
     println("Input: ")
-    val filename = "/Users/caoquan/IdeaProjects/coursera-algo/data/2sat1.txt"
+    //2456
+    val filename = "/Users/caoquan/IdeaProjects/coursera-algo/data/2sat4.txt"
     //    val filename = "/Users/caoquan/IdeaProjects/coursera-algo/data/knap1.txt"
     //    val filename = "/Users/caoquan/IdeaProjects/coursera-algo/data/knap_big.txt"
     // put data into a hash table
